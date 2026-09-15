@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    background: #1e293b;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #f8fafc;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+.pad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.pad-btn {
+    background-color: #0f172a;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.sound-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.key-hint {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: #cbd5e1;
+    font-family: monospace;
+}
+
+.color-1 { border-color: #ff0055; box-shadow: 0 0 10px rgba(255, 0, 85, 0.2); }
+.color-2 { border-color: #00e5ff; box-shadow: 0 0 10px rgba(0, 229, 255, 0.2); }
+.color-3 { border-color: #76ff03; box-shadow: 0 0 10px rgba(118, 255, 3, 0.2); }
+.color-4 { border-color: #ffea00; box-shadow: 0 0 10px rgba(255, 234, 0, 0.2); }
+.color-5 { border-color: #d500f9; box-shadow: 0 0 10px rgba(213, 0, 249, 0.2); }
+.color-6 { border-color: #ff6d00; box-shadow: 0 0 10px rgba(255, 109, 0, 0.2); }
+.color-7 { border-color: #00b0ff; box-shadow: 0 0 10px rgba(0, 176, 255, 0.2); }
+.color-8 { border-color: #1de9b6; box-shadow: 0 0 10px rgba(29, 233, 182, 0.2); }
+
+.pad-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+.pad-btn.active {
+    transform: scale(0.95);
+}
+
+.color-1.active { background-color: #ff0055; box-shadow: 0 0 30px #ff0055; }
+.color-2.active { background-color: #00e5ff; box-shadow: 0 0 30px #00e5ff; }
+.color-3.active { background-color: #76ff03; box-shadow: 0 0 30px #76ff03; }
+.color-4.active { background-color: #ffea00; box-shadow: 0 0 30px #ffea00; }
+.color-5.active { background-color: #d500f9; box-shadow: 0 0 30px #d500f9; }
+.color-6.active { background-color: #ff6d00; box-shadow: 0 0 30px #ff6d00; }
+.color-7.active { background-color: #00b0ff; box-shadow: 0 0 30px #00b0ff; }
+.color-8.active { background-color: #1de9b6; box-shadow: 0 0 30px #1de9b6; }
+
+.color-1.active .sound-name, .color-1.active .key-hint,
+.color-2.active .sound-name, .color-2.active .key-hint,
+.color-3.active .sound-name, .color-3.active .key-hint,
+.color-4.active .sound-name, .color-4.active .key-hint,
+.color-5.active .sound-name, .color-5.active .key-hint,
+.color-6.active .sound-name, .color-6.active .key-hint,
+.color-7.active .sound-name, .color-7.active .key-hint,
+.color-8.active .sound-name, .color-8.active .key-hint {
+    color: #0f172a;
+    font-weight: 900;
+}
+
+@media (max-width: 500px) {
+    .pad-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
